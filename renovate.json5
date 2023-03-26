@@ -5,6 +5,30 @@
     "github>whitesource/merge-confidence:beta"
   ],
   "packageRules": [
+  
+    {
+      "matchConfidence": ["very high"],
+      "dependencyDashboardApproval": true,
+      "commitMessagePrefix": "V-HIGH ",
+    },
+    {
+      "matchConfidence": ["high"],
+      "dependencyDashboardApproval": true,
+      "commitMessagePrefix": "HIGH ",
+    },
+    {
+      "matchConfidence": ["low"],
+      "dependencyDashboardApproval": true,
+      "commitMessagePrefix": "LOW ",
+    },
+    {
+      "matchConfidence": ["neutral"],
+      "dependencyDashboardApproval": true,
+      "commitMessagePrefix": "NEUTRAL ",
+    },
+    
+    
+    /*
     {
       "matchUpdateTypes": ["major"],
       "dependencyDashboardApproval": true,
@@ -20,6 +44,7 @@
       "dependencyDashboardApproval": true,
       "commitMessagePrefix": "PATCH ",
     },
+    */
     
     /* Group High and Very High Confidence updates 
     {
