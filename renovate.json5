@@ -6,47 +6,18 @@
   ],
   "packageRules": [
   
+    /* Suppress Low and Neutral confidence updates - with a badge */
     {
-      "matchConfidence": ["high", "very high", "low", "neutral"],
+      "matchConfidence": ["low", "neutral"],
       "dependencyDashboardApproval": true,
       "commitMessagePrefix": "rnv: ![confidence](https://badges.renovateapi.com/packages/{{datasource}}/{{replace '/' '%2f' depName}}/{{{toVersion}}}/confidence-slim/{{{fromVersion}}})  ",
-    },   
-    
-    /*
-    {
-      "matchUpdateTypes": ["major"],
-      "dependencyDashboardApproval": true,
-      "commitMessagePrefix": "MAJOR ",
-    }, 
-    {
-      "matchUpdateTypes": ["minor"],
-      "dependencyDashboardApproval": true,
-      "commitMessagePrefix": "MINOR ",
-    }, 
-    {
-      "matchUpdateTypes": ["patch"],
-      "dependencyDashboardApproval": true,
-      "commitMessagePrefix": "PATCH ",
     },
-    */
     
-    /* Group High and Very High Confidence updates 
+    /* Group High and Very High Confidence updates */
     {
       "groupName": "high merge confidence",
       "matchConfidence": ["high", "very high"]
     },
-    */
-    /* Group by update type (patch/minor, major)
-    {
-      "groupName": "patch and minor",
-      "matchUpdateTypes": ["minor", "patch"],
-      "dependencyDashboardApproval": true
-    },
-    {
-      "groupName": "major",
-      "matchUpdateTypes": ["major"],
-      "dependencyDashboardApproval": true
-    }
-    */
+
   ]
 }
