@@ -7,26 +7,10 @@
   "packageRules": [
   
     {
-      "matchConfidence": ["very high"],
+      "matchConfidence": ["high", "very high", "low", "neutral"],
       "dependencyDashboardApproval": true,
-      "commitMessagePrefix": "V-HIGH ",
-    },
-    {
-      "matchConfidence": ["high"],
-      "dependencyDashboardApproval": true,
-      "commitMessagePrefix": "HIGH ",
-    },
-    {
-      "matchConfidence": ["low"],
-      "dependencyDashboardApproval": true,
-      "commitMessagePrefix": "LOW ",
-    },
-    {
-      "matchConfidence": ["neutral"],
-      "dependencyDashboardApproval": true,
-      "commitMessagePrefix": "NEUTRAL ",
-    },
-    
+      "commitMessagePrefix": "rnv: ![confidence](https://badges.renovateapi.com/packages/{{datasource}}/{{replace '/' '%2f' depName}}/{{{toVersion}}}/confidence-slim/{{{fromVersion}}})  ",
+    },   
     
     /*
     {
